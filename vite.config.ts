@@ -9,6 +9,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Unocss from 'unocss/vite'
 import extractorPug from '@unocss/extractor-pug'
 import { extractorSplit } from '@unocss/core'
+import { quasar, transformAssetUrls } from '@quasar/vite-plugin'
 
 export default defineConfig({
   resolve: {
@@ -17,7 +18,11 @@ export default defineConfig({
     },
   },
   plugins: [
-    Vue(),
+    Vue({
+      template: { transformAssetUrls },
+    }),
+
+    quasar(),
 
     // https://github.com/hannoeru/vite-plugin-pages
     Pages(),
