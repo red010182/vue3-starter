@@ -22,7 +22,7 @@ export default defineConfig({
       template: { transformAssetUrls },
     }),
 
-    quasar(),
+    // quasar(),
 
     // https://github.com/hannoeru/vite-plugin-pages
     Pages(),
